@@ -1,0 +1,587 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  background-color: #000;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./assets/font-family/Quicksand-Regular.woff2') format('woff2'),
+    url('./assets/font-family/Quicksand-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./assets/font-family/Quicksand-Bold.woff2') format('woff2'),
+    url('./assets/font-family/Quicksand-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./assets/font-family/Quicksand-Medium.woff2') format('woff2'),
+    url('./assets/font-family/Quicksand-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./assets/font-family/Quicksand-Light.woff2') format('woff2'),
+    url('./assets/font-family/Quicksand-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./assets/font-family/Quicksand-SemiBold.woff2') format('woff2'),
+    url('./assets/font-family/Quicksand-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-Bold.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-Black.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-ExtraBold.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-BoldItalic.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-ExtraBoldItalic.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-ExtraBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-BlackItalic.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-Italic.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-Medium.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-MediumItalic.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-SemiBoldItalic.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font-family/PlayfairDisplay-SemiBold.woff2') format('woff2'),
+    url('./assets/font-family/PlayfairDisplay-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+ul li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar {
+  padding: 24px;
+  background-color: #000;
+  border-right: 2px solid #FFFFFF33;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+/* .main_logo {
+  margin-bottom: 38px;
+} */
+
+.contct_us {
+  margin: 38px 0px 29px 0;
+}
+
+.contct_us a {
+  border: 1.5px solid;
+  border-image-source: conic-gradient(from 90deg at 50% 50%, #07A7CD 0deg, #FC0600 62.37deg, #09D809 173.97deg, #FF6600 255.65deg, #F60163 290.5deg, #07A7CD 360deg);
+  border-image-slice: 1;
+  border-radius: 50px;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: normal;
+  text-transform: uppercase;
+
+}
+
+
+.other_pages ul li a {
+  font-family: 'Quicksand';
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  padding: 8px 40px 8px 12px;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main_logo img {
+  max-width: 130px;
+  max-height: 30px;
+}
+
+.side_var_img_txt p {
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.main_div {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.sidebar_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.sec_app {
+  border-bottom: 2px solid #FFFFFF33;
+  padding: 28px;
+}
+
+.sec_app h1 {
+  font-family: Quicksand;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.potential_flutter_div h3 {
+  font-family: Playfair Display;
+  font-weight: 500;
+  font-size: 43px;
+  margin-bottom: 15px;
+  line-height: 120%;
+}
+
+.potential_flutter_div p {
+  font-family: Quicksand;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 143%;
+}
+
+.tech_btn a {
+  font-family: Quicksand;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  background: #08A7CE;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  border-radius: 50px;
+  display: inline-block;
+  line-height: 160%;
+}
+
+.potential_flutter_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 15px;
+  gap: 14px;
+}
+
+.potential_flutter_div {
+  margin-bottom: 50px;
+}
+
+.banner_img {
+  text-align: center;
+}
+
+
+.flutter_dawn {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 15px;
+}
+
+.flutter_dawn_div {
+  align-self: center;
+}
+
+.flutter_dawn_div h3 {
+  font-family: Playfair Display;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 106%;
+}
+
+.flutter_dawn_div p {
+  font-family: Quicksand;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.flutter_dawn_para p {
+  font-family: Quicksand;
+  font-weight: 600;
+  font-size: 16px;
+  width: 100%;
+  max-width: 45%;
+  margin: auto;
+  line-height: 160%;
+
+}
+
+.flutter_dawn_para p a {
+  color: #08A7CE;
+  text-decoration: none;
+}
+
+.flutter_dawn_para p a {
+  color: #08A7CE;
+  text-decoration: none;
+}
+
+.begin_btn a {
+  background-color: #08A7CE;
+  padding: 12px 50px 12px 30px;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 160%;
+}
+
+.begin_btn {
+  position: relative;
+  align-self: end;
+}
+
+.begin_btn::before {
+  content: '';
+  position: absolute;
+  background-image: url("../src/assets/img/Vector.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 12px;
+  height: 12px;
+  right: 30px;
+  top: 20px;
+  z-index: 99999;
+}
+
+.dynamic_service {
+  padding: 40px;
+}
+
+.dynamic_service_div {
+  margin-bottom: 20px;
+}
+
+.dynamic_service_div h3 {
+  font-family: Playfair Display;
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.dynamic_service_div p {
+  font-family: Quicksand;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+}
+
+.innovation_para p {
+  font-family: Quicksand;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.main_accordion_sec {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 20px;
+}
+
+.accordion_sec {
+  height: 100%;
+}
+
+.accordion_img {
+  height: 100%;
+}
+
+.accordion_img img {
+  height: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.accordion_sec .MuiAccordion-heading .css-rizt0-MuiTypography-root {
+  font-family: Playfair Display;
+  font-weight: 500;
+  font-size: 26px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.accordion_sec .css-112ujhy-MuiAccordionDetails-root .css-rizt0-MuiTypography-root {
+  font-family: Quicksand;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.connet_main {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 15px;
+}
+
+.item_menuEvents ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.item_menuEvents li {
+  font-family: Quicksand;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.form_div h3 {
+  font-family: Playfair Display;
+  font-weight: 500;
+  font-size: 75px;
+  text-align: right;
+  margin-bottom: 50px;
+}
+
+input::placeholder {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.input-field::placeholder {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+
+.form_details input {
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 0 0 20px 0;
+  text-align: start;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+.form_submit {
+  text-align: end;
+  margin-top: 30px;
+}
+
+.form_submit a {
+  font-family: Quicksand;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 160%;
+  text-transform: uppercase;
+  background-color: #08A7CE66;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 25px;
+  border-radius: 50px;
+}
+
+.menu_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.connet_us p {
+  font-family: Quicksand;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.connet_us {
+  max-width: 45%;
+}
+
+.connet_us .connet_us_para {
+  margin-bottom: 20px;
+}
+
+.footer_menu_main {
+  padding: 20px;
+}
+
+.footer_menu ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer_menu ul li a {
+  font-family: Quicksand;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

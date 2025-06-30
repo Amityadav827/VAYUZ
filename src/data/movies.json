@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "rating": 4.8,
+    "category": "Hollywood",
+    "description": "A mind-bending thriller about dreams within dreams."
+  },
+  {
+    "id": 2,
+    "title": "Interstellar",
+    "rating": 4.7,
+    "category": "Hollywood",
+    "description": "A journey through space and time to save humanity."
+  },
+  {
+    "id": 3,
+    "title": "The Dark Knight",
+    "rating": 4.9,
+    "category": "Hollywood",
+    "description": "Batman fights the Joker in this epic superhero film."
+  },
+  {
+    "id": 4,
+    "title": "Avatar",
+    "rating": 4.5,
+    "category": "Hollywood",
+    "description": "Humans explore a lush alien world in a futuristic tale."
+  },
+  {
+    "id": 5,
+    "title": "3 Idiots",
+    "rating": 4.6,
+    "category": "Bollywood",
+    "description": "A fun and inspiring story of engineering students."
+  },
+  {
+    "id": 6,
+    "title": "Dangal",
+    "rating": 4.7,
+    "category": "Bollywood",
+    "description": "A wrestler trains his daughters to become champions."
+  },
+  {
+    "id": 7,
+    "title": "Shershaah",
+    "rating": 4.4,
+    "category": "Bollywood",
+    "description": "Biopic of Indian army hero Vikram Batra."
+  },
+  {
+    "id": 8,
+    "title": "Zindagi Na Milegi Dobara",
+    "rating": 4.6,
+    "category": "Bollywood",
+    "description": "Three friends discover life and freedom on a trip to Spain."
+  }
+]
