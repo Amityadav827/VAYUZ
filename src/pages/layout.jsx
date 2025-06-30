@@ -14,7 +14,7 @@ const Layout = () => {
                             <Link to="/"><img src={logo} alt="Vayuz" style={{ width: '100%' }} /></Link>
                         </div>
                         <div className='contct_us'>
-                            <Link to="/contact">Contact Us</Link>
+                            <Link to="/formDetails">Contact Us</Link>
                         </div>
                         <div className='other_pages'>
                             <ul style={{ listStyle: 'none', padding: 0 }}>

@@ -177,10 +177,18 @@ ul li {
   text-decoration: none;
 }
 
-.content {
+/* .content {
   align-items: center;
   display: flex;
   justify-content: center;
+} */
+
+.development_main_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
 }
 
 .sidebar {
@@ -418,6 +426,7 @@ ul li {
   display: grid;
   grid-template-columns: 60% 40%;
   padding: 20px;
+  gap: 20px;
 }
 
 .accordion_sec {
@@ -430,7 +439,7 @@ ul li {
 
 .accordion_img img {
   height: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 3 / 1;
   object-fit: cover;
 }
 
@@ -500,6 +509,7 @@ input::placeholder {
   text-align: start;
   margin: 0 0 20px 0;
   width: 100%;
+  color: #fff;
 }
 
 .form_submit {
@@ -507,7 +517,7 @@ input::placeholder {
   margin-top: 30px;
 }
 
-.form_submit a {
+.form_submit button {
   font-family: Quicksand;
   font-weight: 700;
   font-size: 13px;
@@ -518,6 +528,8 @@ input::placeholder {
   text-decoration: none;
   padding: 8px 25px;
   border-radius: 50px;
+  border: none;
+  cursor: pointer;
 }
 
 .menu_item {
@@ -558,30 +570,37 @@ input::placeholder {
   text-decoration: none;
 }
 
+.main_accordion_sec .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.MuiAccordion-root.Mui-expanded.css-k0b1kr-MuiPaper-root-MuiAccordion-root {
+  background: #000;
+  color: #fff;
+}
 
+.main_accordion_sec .css-1umw9bq-MuiSvgIcon-root {
+  fill: rgb(255, 255, 255);
+}
 
+.main_accordion_sec .css-1rurq6-MuiButtonBase-root-MuiAccordionSummary-root .MuiAccordionSummary-content {
+  margin-left: 0;
+}
 
+.main_accordion_sec .css-112ujhy-MuiAccordionDetails-root {
+  padding: 16px 0;
+}
 
+.main_accordion_sec .css-1rurq6-MuiButtonBase-root-MuiAccordionSummary-root {
+  padding: 0px 0;
+}
 
+.main_accordion_sec .css-1rurq6-MuiButtonBase-root-MuiAccordionSummary-root {
+  background-color: rgb(0 0 0);
+  color: #fff;
+}
 
+.main_accordion_sec .css-k0b1kr-MuiPaper-root-MuiAccordion-root {
+  background-color: #000000;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.accordion_sec a {
+  color: #08A7CE;
+  text-decoration: none;
+}

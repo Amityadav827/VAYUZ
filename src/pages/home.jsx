@@ -10,6 +10,8 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // add this inside your imports
 
 
 const Accordion = styled((props) => (
@@ -64,6 +66,35 @@ const Home = () => {
         </Accordion>
     );
 
+
+    const navigate = useNavigate(); // use this inside your component
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: ''
+    });
+
+    const handleChanges = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const oldData = JSON.parse(localStorage.getItem('contacts')) || [];
+        const updatedData = [...oldData, formData];
+        localStorage.setItem('contacts', JSON.stringify(updatedData));
+        alert("Form submitted!");
+        setFormData({ name: '', email: '', phone: '' });
+        navigate('/formDetails'); // redirect to submit page
+    };
+
+
+
     return (
         <div>
 
@@ -112,13 +143,18 @@ const Home = () => {
             <div className='main_accordion_sec'>
                 {/* Accordion Section */}
                 <div className='accordion_sec'>
-                    {renderAccordion('panel1', 'Flutter App Development', 'Unlock endless possibilities with Flutter App Development. Build beautiful, high-performance applications for any platform - faster and easier than ever before. Ready to revolutionize your app experience? Let\'s get started today!')}
-                    {renderAccordion('panel2', 'UI/UX Design', 'We create intuitive, engaging, and user-friendly designs that make your app stand out in the digital landscape.')}
-                    {renderAccordion('panel3', 'Customization & Integration', 'Tailor-made solutions and seamless integrations to fit your exact business needs.')}
-                    {renderAccordion('panel4', 'Testing & Quality Assurance', 'Thorough testing and QA to ensure your application performs flawlessly.')}
-                    {renderAccordion('panel5', 'Maintenance & Support', 'Ongoing maintenance and fast support to keep your apps running smoothly.')}
-                    {renderAccordion('panel6', 'Consulting & Training', 'Expert consulting and in-depth training to empower your team.')}
-                    {renderAccordion('panel7', 'Migration & Upgrades', 'Modernize legacy systems and upgrade your apps with minimal downtime.')}
+                    {renderAccordion('panel1', 'Flutter App Development', <>
+                        Unlock endless possibilities with Flutter App Development. Build beautiful,
+                        high-performance applications for any platform - faster and easier than ever before.
+                        Ready to revolutionize your app experience? <Link to="/">Let's get started today!</Link>
+                    </>)}
+                    {renderAccordion('panel2', 'UI/UX Design', <>We create intuitive, engaging, and user-friendly designs that make your app stand out in the digital landscape.</>)}
+                    {renderAccordion('panel3', 'Customization & Integration', <>Tailor-made solutions and seamless integrations to fit your exact business needs.
+                    </>)}
+                    {renderAccordion('panel4', 'Testing & Quality Assurance', <>Thorough testing and QA to ensure your application performs flawlessly.</>)}
+                    {renderAccordion('panel5', 'Maintenance & Support', <>Ongoing maintenance and fast support to keep your apps running smoothly.</>)}
+                    {renderAccordion('panel6', 'Consulting & Training', <>Expert consulting and in-depth training to empower your team.</>)}
+                    {renderAccordion('panel7', 'Migration & Upgrades', <>Modernize legacy systems and upgrade your apps with minimal downtime.</>)}
                 </div>
                 <div className='accordion_img'>
                     <img src={Right} alt="" />
@@ -142,17 +178,20 @@ const Home = () => {
                         <p>vayuz.com</p>
                     </div>
                 </div>
+
                 <div className='form_main_div'>
                     <div className='form_div'>
                         <h3>Connect <br /> With Us</h3>
-                        <div className='form_details'>
-                            <div><input type="text" name="name" placeholder="Full Name" /></div>
-                            <div><input type="email" name="email" placeholder="Email" /></div>
-                            <div><input type="tel" name="phone" placeholder="Phone Number" /></div>
-                        </div>
-                        <div className='form_submit'>
-                            <Link to='/Submit' >Submit</Link>
-                        </div>
+                        <form onSubmit={handleSubmit}>
+                            <div className='form_details'>
+                                <input type="text" name="name" value={formData.name} onChange={handleChanges} required placeholder="Full Name" />
+                                <input type="email" name="email" value={formData.email} onChange={handleChanges} required placeholder="Email" />
+                                <input type="tel" name="phone" value={formData.phone} onChange={handleChanges} required placeholder="Phone Number" />
+                            </div>
+                            <div className='form_submit'>
+                                <button type="submit">Submit</button> {/* ✅ NOT <Link> */}
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

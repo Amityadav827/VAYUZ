@@ -7,6 +7,7 @@ import Development from './pages/development';
 import Challenge from './pages/challenge';
 import Hire from './pages/hire';
 import Comunity from './pages/comunity';
+import FormDetails from './pages/formDetails';
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="challenges" element={<Challenge />} />
           <Route path="hire-developer" element={<Hire />} />
           <Route path="community" element={<Comunity />} />
+          <Route path="/formDetails" element={<FormDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>
