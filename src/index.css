@@ -604,3 +604,60 @@ input::placeholder {
   color: #08A7CE;
   text-decoration: none;
 }
+
+.contact_details h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact_details {
+  padding: 32px;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+.edit_btn {
+  background: red;
+  color: #fff;
+  padding: 5px 20px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.delete_btn {
+  background: #008bad;
+  color: #fff;
+  padding: 5px 20px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.save_btn {
+  background: green;
+  color: #fff;
+  padding: 5px 20px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+td input {
+  outline: none;
+  padding: 10px;
+  text-align: center;
+}

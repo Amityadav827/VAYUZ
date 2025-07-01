@@ -77,6 +77,10 @@ const Home = () => {
 
     const handleChanges = (e) => {
         const { name, value } = e.target;
+
+        // Allow only numbers in phone field
+        if (name === 'phone' && /[^0-9]/.test(value)) return;
+
         setFormData((prev) => ({
             ...prev,
             [name]: value
@@ -186,7 +190,17 @@ const Home = () => {
                             <div className='form_details'>
                                 <input type="text" name="name" value={formData.name} onChange={handleChanges} required placeholder="Full Name" />
                                 <input type="email" name="email" value={formData.email} onChange={handleChanges} required placeholder="Email" />
-                                <input type="tel" name="phone" value={formData.phone} onChange={handleChanges} required placeholder="Phone Number" />
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleChanges}
+                                    required
+                                    placeholder="Phone Number"
+                                    pattern="[0-9]*"
+                                    inputMode="numeric"
+                                />
+
                             </div>
                             <div className='form_submit'>
                                 <button type="submit">Submit</button> {/* ✅ NOT <Link> */}
