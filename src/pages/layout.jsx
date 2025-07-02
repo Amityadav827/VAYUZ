@@ -3,11 +3,48 @@ import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import logo from "../assets/img/Vayuz_logo.png";
 import Left_image from "../assets/img/left_image.png";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const Layout = () => {
+
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setSidebarOpen(!sidebarOpen);
+    };
+
+    const closeSidebar = () => {
+        setSidebarOpen(false);
+    };
+
+
+    const navigate = useNavigate();
+
+
     return (
         <div className='main_div'>
-            <div className='sidebar'>
+
+            {/* Hamburger Button */}
+            {/* {!sidebarOpen && ( */}
+            <div className='hamburger_menu' onClick={toggleSidebar}>
+                <div className='hamburger_icon'>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                </div>
+                <div className='hamburger_logo' onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
+                    <img src={logo} alt="Vayuz" className="hamburger_logo" />
+                </div>
+
+            </div>
+            {/* )} */}
+
+            {/* Sidebar */}
+            <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+                {/* Close Button */}
+                <button className="close_btn" onClick={closeSidebar}>×</button>
                 <div className='sidebar_main'>
                     <div className='sidebar_main_div'>
                         <div className='main_logo'>
@@ -34,7 +71,7 @@ const Layout = () => {
                 </div>
             </div>
 
-            <div className="content">
+            <div className={`content ${sidebarOpen ? 'content-shrink' : ''}`}>
                 <Outlet />
             </div>
         </div>
