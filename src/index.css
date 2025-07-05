@@ -664,7 +664,13 @@ td input {
 
 
 
+.hamburger_menu {
+  display: none;
+}
 
+button.close_btn {
+  display: none;
+}
 
 
 
@@ -683,6 +689,16 @@ td input {
 
 
 @media (max-width: 767px) {
+
+
+  .hamburger_menu {
+    display: block;
+  }
+
+  button.close_btn {
+    display: block;
+  }
+
   .main_div {
     display: block;
     position: relative;
@@ -896,6 +912,19 @@ td input {
   .other_pages ul li a {
     margin-bottom: 0;
     padding: 8px 40px 8px 0;
+  }
+
+  .contact_details {
+    padding: 16px 0;
+  }
+
+  .table_wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table_wrapper table {
+    min-width: 600px;
   }
 
 

@@ -34,10 +34,16 @@ const Layout = () => {
                     <span className='bar'></span>
                     <span className='bar'></span>
                 </div>
-                <div className='hamburger_logo' onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
+                <div
+                    className='hamburger_logo'
+                    onClick={(e) => {
+                        e.stopPropagation(); // ✅ Prevent toggleSidebar
+                        navigate('/');
+                    }}
+                    style={{ cursor: 'pointer' }}
+                >
                     <img src={logo} alt="Vayuz" className="hamburger_logo" />
                 </div>
-
             </div>
             {/* )} */}
 
@@ -51,14 +57,14 @@ const Layout = () => {
                             <Link to="/"><img src={logo} alt="Vayuz" style={{ width: '100%' }} /></Link>
                         </div>
                         <div className='contct_us'>
-                            <Link to="/formDetails">Contact Us</Link>
+                            <Link to="/formDetails" onClick={closeSidebar}>Contact Us</Link>
                         </div>
                         <div className='other_pages'>
                             <ul style={{ listStyle: 'none', padding: 0 }}>
-                                <li><Link to="/app-development">App Development</Link></li>
-                                <li><Link to="/challenges">Challenges</Link></li>
-                                <li><Link to="/hire-developer">Hire Developer</Link></li>
-                                <li><Link to="/community">Community</Link></li>
+                                <li><Link to="/app-development" onClick={closeSidebar}>App Development</Link></li>
+                                <li><Link to="/challenges" onClick={closeSidebar}>Challenges</Link></li>
+                                <li><Link to="/hire-developer" onClick={closeSidebar}>Hire Developer</Link></li>
+                                <li><Link to="/community" onClick={closeSidebar}>Community</Link></li>
                             </ul>
                         </div>
                     </div>

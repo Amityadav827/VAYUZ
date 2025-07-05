@@ -47,6 +47,7 @@ const FormDetails = () => {
                 {contacts.length === 0 ? (
                     <p>No submissions yet.</p>
                 ) : (
+                    <div className="table_wrapper">
                     <table border="1" cellPadding="10" cellSpacing="0" style={{ width: '100%', textAlign: 'left' }}>
                         <thead style={{ backgroundColor: '#000', color: '#fff' }}>
                             <tr>
@@ -113,6 +114,7 @@ const FormDetails = () => {
                             ))}
                         </tbody>
                     </table>
+                    </div>
                 )}
             </div>
 
