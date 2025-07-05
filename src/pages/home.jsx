@@ -113,7 +113,7 @@ const Home = () => {
                         <p>Your Premier Partner for Cross-Platform App Excellence!</p>
                     </div>
                     <div className='tech_btn'>
-                        <Link to="/Tech">Upgrade Your Tech</Link>
+                        <Link to="/">Upgrade Your Tech</Link>
                     </div>
                 </div>
                 <div className='banner_img'>
@@ -130,7 +130,7 @@ const Home = () => {
                     <p>Uncover the fascinating story of Flutter in 'Flutter's Dawn: History of Flutter.' From humble origins to global acclaim, delve into its captivating narrative. Explore milestones, triumphs, and challenges. Whether tech enthusiast or curious mind, join us on this captivating journey! <Link to="/">Click to begin!</Link> </p>
                 </div>
                 <div className='begin_btn'>
-                    <Link to="/Begin">Begin</Link>
+                    <Link to="/">Begin</Link>
                 </div>
             </div>
 
